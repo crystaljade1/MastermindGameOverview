@@ -1,0 +1,13 @@
+May 9, 2017
+Mastermind Game Overview
+
+Mastermind is a code-breaking game, where users take turns (guesses) deciphering a secret code in order to win. The guesses are prompted through the movement of pegs between color blocks.
+
+The Mastermind game functionality is largely based on user input from two participants, in the form of guesses. Guesses, depending whether they match the given code, are classified as “perfect” and “imperfect.”
+
+Whenever a new game begins, a new `Code` is generated and a new `CodeView` is generated via the drawing of a new display. 
+
+The display is comprised of color blocks: red, orange, yellow, green, blue, purple, magenta and light grey, as well as pegs of the same colors. The user is able to move pegs in either curved or straight line segments, according to its definition as `UIBezierPath`. Wherever the peg is placed, that specific color block turns red.
+
+The enum that outlines the `State` of the game ensures that, so long as the game is `in progress`, that the code remains consistent. This eliminates the possibility of the secret code changing mid-game and altering the functionality.
+
